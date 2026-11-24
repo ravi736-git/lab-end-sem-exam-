@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Academic Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Student Academic Management System</h1>
+        <p>Manage Student Academic Information</p>
+    </header>
+
+    <div class="container">
+
+        <h2>Add Student Details</h2>
+
+        <form id="studentForm">
+
+            <input type="hidden" id="editId">
+
+            <input type="text" id="studentId"
+                placeholder="Student ID" required>
+
+            <input type="text" id="name"
+                placeholder="Student Name" required>
+
+            <input type="email" id="email"
+                placeholder="Email Address" required>
+
+            <input type="text" id="department"
+                placeholder="Department" required>
+
+            <input type="text" id="course"
+                placeholder="Course" required>
+
+            <input type="number" id="semester"
+                placeholder="Semester" min="1" required>
+
+            <input type="number" id="marks"
+                placeholder="Marks" min="0" max="100" required>
+
+            <input type="text" id="grade"
+                placeholder="Grade" required>
+
+            <button type="submit" id="submitBtn">
+                Add Student
+            </button>
+
+        </form>
+
+        <h2>Student Academic Records</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Department</th>
+                    <th>Course</th>
+                    <th>Semester</th>
+                    <th>Marks</th>
+                    <th>Grade</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody id="studentTable"></tbody>
+        </table>
+
+        <p id="message"></p>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
